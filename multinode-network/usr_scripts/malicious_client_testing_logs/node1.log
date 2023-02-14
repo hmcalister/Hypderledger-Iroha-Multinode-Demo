@@ -1,0 +1,1960 @@
+query_hash: "be92a1e47b752f7f63d68ea33cccc2516aa0f67f88e2eaa55fe3cd6bc08f6493"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_peer {
+                  peer {
+                    address: "172.29.101.121:10001"
+                    peer_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+                  }
+                }
+              }
+              commands {
+                add_peer {
+                  peer {
+                    address: "172.29.101.122:10002"
+                    peer_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+                  }
+                }
+              }
+              commands {
+                add_peer {
+                  peer {
+                    address: "172.29.101.123:10003"
+                    peer_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+                  }
+                }
+              }
+              commands {
+                add_peer {
+                  peer {
+                    address: "172.29.101.124:10004"
+                    peer_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+                  }
+                }
+              }
+              commands {
+                create_role {
+                  role_name: "admin"
+                  permissions: can_add_peer
+                  permissions: can_add_signatory
+                  permissions: can_create_account
+                  permissions: can_create_domain
+                  permissions: can_create_role
+                  permissions: can_get_all_acc_ast
+                  permissions: can_get_all_acc_ast_txs
+                  permissions: can_get_all_acc_detail
+                  permissions: can_get_all_acc_txs
+                  permissions: can_get_all_accounts
+                  permissions: can_get_all_signatories
+                  permissions: can_get_all_txs
+                  permissions: can_get_blocks
+                  permissions: can_get_roles
+                  permissions: can_read_assets
+                  permissions: can_remove_signatory
+                  permissions: can_set_quorum
+                }
+              }
+              commands {
+                create_role {
+                  role_name: "user"
+                  permissions: can_add_signatory
+                  permissions: can_get_my_acc_ast
+                  permissions: can_get_my_acc_ast_txs
+                  permissions: can_get_my_acc_detail
+                  permissions: can_get_my_acc_txs
+                  permissions: can_get_my_account
+                  permissions: can_get_my_signatories
+                  permissions: can_get_my_txs
+                  permissions: can_grant_can_add_my_signatory
+                  permissions: can_grant_can_remove_my_signatory
+                  permissions: can_grant_can_set_my_account_detail
+                  permissions: can_grant_can_set_my_quorum
+                  permissions: can_grant_can_transfer_my_assets
+                  permissions: can_receive
+                  permissions: can_remove_signatory
+                  permissions: can_set_quorum
+                  permissions: can_transfer
+                }
+              }
+              commands {
+                create_role {
+                  role_name: "money_creator"
+                  permissions: can_add_asset_qty
+                  permissions: can_create_asset
+                  permissions: can_receive
+                  permissions: can_transfer
+                }
+              }
+              commands {
+                create_domain {
+                  domain_id: "test"
+                  default_role: "user"
+                }
+              }
+              commands {
+                create_asset {
+                  asset_name: "coin"
+                  domain_id: "test"
+                  precision: 2
+                }
+              }
+              commands {
+                create_account {
+                  account_name: "admin"
+                  domain_id: "test"
+                  public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+                }
+              }
+              commands {
+                create_account {
+                  account_name: "test"
+                  domain_id: "test"
+                  public_key: "716fe505f69f18511a1b083915aa9ff73ef36e6688199f3959750db38b8f4bfc"
+                }
+              }
+              commands {
+                append_role {
+                  account_id: "admin@test"
+                  role_name: "admin"
+                }
+              }
+              commands {
+                append_role {
+                  account_id: "admin@test"
+                  role_name: "money_creator"
+                }
+              }
+              quorum: 1
+            }
+          }
+        }
+        tx_number: 1
+        height: 1
+        prev_block_hash: "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    }
+  }
+}
+
+
+query_hash: "080230fc9e474df294dff43e10fcef4be1b34789b380477bcf568ad8af971e63"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                create_role {
+                  role_name: "basic_user"
+                  permissions: can_receive
+                  permissions: can_transfer
+                  permissions: can_grant_can_transfer_my_assets
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896661836
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "090cd9b0f9988b577c4098def72c727757fe45b6545235d10ca08e272ae5c338f370df3adb7bd64557b7da3e72b7afe2b0ec46c3962c45e8838e4298a92b9700"
+          }
+        }
+        height: 2
+        prev_block_hash: "b88ff8f161317e294805c95e5bd5f2d06b975982c34e26aa4fd0caf32f6bc5c0"
+        created_time: 1637896662235
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "c4223cec4c73024a2fd44a8d0fe354bd1ad8a1676280acc3395ec88cae2499a9e5eeb2173e8081a5ea0fe42dc8b6a719321ccb731ac23cec46bce9c49f8e5201"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "31beaf8e3336b3e644103482cd0827dc2163900a3083c8ddfa545e388eee9d87b2a2afc9428e57c98638978b56a777a7b3841410a5627528ff8f8ef0bd95c10b"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "0990705c8dd1d1c89be4101309ee8d6b98f2408f9258a059434921de75f5aa13e1f5ac92b92a39a64f36794cc87b70ae7bbf0ee424db1ff89e1613a4f9d5f008"
+      }
+    }
+  }
+}
+
+
+query_hash: "790ce281ba782e47fad095f9c5951358eac0c217498365d7a440c1f306ae6ba1"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                create_domain {
+                  domain_id: "pytest"
+                  default_role: "basic_user"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896662289
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "93f12c8fc818ec17d84fb2c0de344677b397a1f7f12076ebabcf00ef8c8beea7d147bd685fcad9652c871e17dbebe96fe445ea1a6ce6eb8f17d2b91ccb882c06"
+          }
+        }
+        height: 3
+        prev_block_hash: "12c40e5985304124197bcd078883161e60a911cee32cad941c2eb047394dd12f"
+        created_time: 1637896665284
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "d4fd2aca13fb816bdbbbdbdf70dec4e7c9c3ed1a2480dbd2a930c907233352541ec0c6c56b6d9b61deeacd9f461ba377639779ad387f1ce21ecebdf0782d9f0d"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "69a76ec7c1702d0389a85a0472493e427a4e264b62b98ccd52605eaca7d0e819ddc074dcba4b00fa4a6daf20c57598efc87e186d270bb3334a48c84fb8f02d0a"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "e167ececd67c95165b48ee9a2ee9ea8d522333e5abf80e10f59f1865ea68cef787d046a68e1858e25b2f8f67c60281606455e6763006a6a439f2192a362ef808"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "011dc0413b23136c451b2722e7ac2a74a9d03a2c1c94938598be2f70b563b71a48cf99446a1aa94613f5b254ac0b789e70ca671677d90e0e20c86c77258c5305"
+      }
+    }
+  }
+}
+
+
+query_hash: "46e54158b21f31903688cba0d4405150e41654d8dca37b8e60fe1304a3f785e0"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                create_asset {
+                  asset_name: "coin"
+                  domain_id: "pytest"
+                  precision: 2
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896665336
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "1821643a2fc416d76182a7187a24b152857e93a565d8c078a4d25929d1b9f54c5d5691eeb3e933055105afde6959de2016ea8804f6cbbbd5862316419dde5a0a"
+          }
+        }
+        height: 4
+        prev_block_hash: "2a40f882d7a16e10deb6b9f0432d97fd473bbc102ab984d95771e0f5fc65a0a3"
+        created_time: 1637896668336
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "cede780c4c80c16e3a6501bce21b39da6f97df88691e66f0585be57a758d6ab6b7921ec60a4d0d7d36c104a8d5d8713b699738080bd18a7203239b85986be80b"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "85d21fd3dc6ab7a741bcde15c62fdf96fea571b32980360543c68728ac064236d5e127be181f2095d867beb25a31094900b09965d729054b63bd326c983eda0a"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "1bfe856d78a725ef9de1bd50c61bb41474df8606511b638a23a9f86a8a4ece2636a35be3c78eeabbd87ad771a50eb5cb79dd2af662eab8c3cf7c3fd81b36ea03"
+      }
+    }
+  }
+}
+
+
+query_hash: "0bd0385f1adb6719c8d95c2ec680854dbcf9491074b68a71131666b9acab32e5"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                create_account {
+                  account_name: "user_a"
+                  domain_id: "pytest"
+                  public_key: "67c11be2a9d089cfda569ab73e9345d2514270be01ee8372d0393396fb57cea2"
+                }
+              }
+              commands {
+                create_account {
+                  account_name: "user_b"
+                  domain_id: "pytest"
+                  public_key: "f2f587bab4ada48e7747c7537cb4e1d2f6df1ddf6ea230d8028e8c53c4e86a0c"
+                }
+              }
+              commands {
+                create_account {
+                  account_name: "user_c"
+                  domain_id: "pytest"
+                  public_key: "6fa25d151156868a855541bd05d3b40a5661ed41f4acd48fd8ec0d6304d9edb6"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896668392
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "b49ee1592bcf19a836b39a6aa240110fa401b48b75fef515e7101da3f9c62c5866cb1eb0b4666931caf9618c972c36b2e2ad6f5deb39e92ff5ca37825f289101"
+          }
+        }
+        height: 5
+        prev_block_hash: "b113004da74917a9050735c8b62c415d1180f073512ab2c8686bc089a26c0625"
+        created_time: 1637896671384
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "977fc999218bf4f32b3cd78fb53fcd9926182df60f3d3860491010c4c442522072d5c3d3a6141e425b407b6470de1fd34df93f6d72412d384f4118b002e31e06"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "fbff34ab948e449b762abd44fa1665ae8d64d295b57762a0e0bf3d48ea60147abb2c2ba612c35150cc36409435eefd1c912cce4d73cb397cb8cf03a769eb3f07"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "e3d930aed5ba335c8ba87c36cc95591cf5b0d7c6ed1e87921ba987176d6a76ec603f20041ad5099a1e45623b316085aa984934c341e07c13650628d6be0fd70b"
+      }
+    }
+  }
+}
+
+
+query_hash: "d3f42531361dc5dcf3020e85b84ed50e7bc2faaca24c48e0edcdddf96deae18e"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                grant_permission {
+                  account_id: "admin@test"
+                  permission: can_transfer_my_assets
+                }
+              }
+              creator_account_id: "user_a@pytest"
+              created_time: 1637896671439
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "67c11be2a9d089cfda569ab73e9345d2514270be01ee8372d0393396fb57cea2"
+            signature: "3e8f09a7db0afc0bbdda38c69ee78d23b422cd2d72fa21725d569e0e28d0331c06bb40269b7f2160149907d492d3bb9f212720f3cc29e4d81986ae53415eb807"
+          }
+        }
+        height: 6
+        prev_block_hash: "7a35bd926267a8fb54b581ffbe1452e194a1aa5d3cf06060efdde3411d5978d9"
+        created_time: 1637896674435
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "eddd7f6dd2ae4656f2ff1c1570a13b6e2ccb89e315e0bf88aeee622a423014c3f0c979a969a521c93a01c71517f665d055974072760902b28fc53a2365273101"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "3ac729cb9fe030398b2f7a958c8dfa5b3d6412f64fcdb43a88de981e6f5e792335b48569e3e0a7dc9b292a017987d7cd1e02b446f7323436cd82b14e5f0dec0b"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "3830a568ee00b261198c1a19e8b90bc9906347c97a6721a8edf1498d1ec4863dee34806d6d5453347730206a729e8098deedc16695863c0ed7f4440b2714720a"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "f42f62e674d4841e236ad3fa70e6e74957d143245d00720fdcae9c545bb6401ca401da8136a1e89da419731afc264dfaf7a371216073a31e71749b32718b9706"
+      }
+    }
+  }
+}
+
+
+query_hash: "82054fabc3035f1f403a57de01bcaaf587a1fc9273f51c95f6f6cf86193c3461"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                grant_permission {
+                  account_id: "admin@test"
+                  permission: can_transfer_my_assets
+                }
+              }
+              creator_account_id: "user_b@pytest"
+              created_time: 1637896674484
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "f2f587bab4ada48e7747c7537cb4e1d2f6df1ddf6ea230d8028e8c53c4e86a0c"
+            signature: "16bb71eb2c5388622d2eee86e8695191f4bd2ec1bd768c916a0a26733f1f43988f4eece0b6a38ce74303f68e0498042f8eceb59729eb236bd9c8a69ff1aa9405"
+          }
+        }
+        height: 7
+        prev_block_hash: "f8293fd6f7dbd8b3cad19d3f1b34974bb6c029a421b7d1497aacde11d1f180f0"
+        created_time: 1637896677484
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "d647fa1f342d0b1ad855056b3ad6912d88f6ae6e6c2d298cf13c76d8740a736c0e80004b8d8aac11151df21c278622c527bb2569f0d524369357101f8218f100"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "171e63042d9489b5815863f441215eb8b5bbcd53280f59d71a86e4794722aceab0451c1fc83733ea1d15185ca56971eeb3b105a374f7da14166d465cd4d6c400"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "ea8ad38144eb6353d963812ac046e507d2e6842e9c1954811b5a7ac3562c635c9c5cb4e9969a529fc467b23a92211b234ad616407c229bdb17aa8fb00df5c001"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "3969871ac89ca96fc35b6719546c73929a2fb1c4b5dd28976f8f9cb9324b8afbe9c262e7ccfd784a949e7202d8f1822ac6e7693262057753ed073779a7a2530b"
+      }
+    }
+  }
+}
+
+
+query_hash: "29d401d000542e384367a61fb463823f19de8a57cacb7a0eee37c0497a009867"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                grant_permission {
+                  account_id: "admin@test"
+                  permission: can_transfer_my_assets
+                }
+              }
+              creator_account_id: "user_c@pytest"
+              created_time: 1637896677542
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "6fa25d151156868a855541bd05d3b40a5661ed41f4acd48fd8ec0d6304d9edb6"
+            signature: "7b1037ed6ccbce584fb88f2d6188a52a454c3b1119b8240137cca5611853fc4ba26059e53285c65767f1762d468b603aa997e81ba6c615a2ffe247d1dfc53c0e"
+          }
+        }
+        height: 8
+        prev_block_hash: "d24c4e774150c034a8f293bfb30d3c675a4f8eba9525fe5798239fae434a1ec2"
+        created_time: 1637896680538
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "a99a9695a8e2f3255ab1b1e1d2cd2ccd8dda6779498ae5064e6c438391b14ab1d925b485d5cd02c456a8540eb484e957fc21a308b2cc3ee45ff00468809b4c06"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "774d53aa0c05141f8612c1318373a9a43757c22fb83fed532093ab2666251127fffb12d33b095a08543eb6dba160a44f970cee447152414259c2aa890442d804"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "b358a27833ec1655a14975cb44d0e69d8b1a3f61aec45d80c45b5ed3fc77fb6e1e427b4651c53f214afe6799557298203576c32bec304eecb846549f83648607"
+      }
+    }
+  }
+}
+
+
+query_hash: "3b5dfb83600406663774741b3b77a7a6cd7c14a9c2f4173c968155857770fe57"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "1000.00"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896680596
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "8e984ae4e1844c168a5e2f2ccdb5fbfc0de04205bf2d06d484ee600062c177274e6f0d6985d3de529824449fc1b0e29560b313c650f444f216320b08558fb00a"
+          }
+        }
+        height: 9
+        prev_block_hash: "010c9d629d29ae3530ca0210642bbac4d5866cf4a761c49ff226635fd173da15"
+        created_time: 1637896683589
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "3472fa0109241a909525ef42f3c05ef69dca12e69f3d3284df180fd7ded84c61c3f94b9e8889b41753120a7e15278c87cba33a4e57c90eefb16413099dfaf10f"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "63e733b4aa5220aa08770ebb0745319c10029613972acbb076112ff3d0e0db59c35370a0f054065636f8a95c3c63ee8a647681c928120e26038ca0d93a564909"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "44d9a451955e558fbb9a1ccf5192fa01d9d0acded750d9442a5f590a64404f0b070c2e661cb17e4a4435a0726919cea7d91d73232d60dabd44e7902a48fd5101"
+      }
+    }
+  }
+}
+
+
+query_hash: "769f8b8fed8c0352df02a9d7b75ff51904e376ae69ddde02b43c67f3b6140105"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896683643
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "a9911b123045bc3c8077dd25c8f4767cfefbe9c5b8b4583c50d66a1e51cacef7f10bec6fdd6ce3f07c4f540d4fb0c4049f1a975a1ceac6cdb4aeba25bef8f00c"
+          }
+        }
+        height: 10
+        prev_block_hash: "fdde2e203f86b24634634c7a82cbb0c5ee0447c9b9764f48ff4714f594daab49"
+        created_time: 1637896686639
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "e638ebda323d50dfd8f75d9daf92b78af7ad273137c4b941965abe2b705eada320bd1fda7273aa45f2fc5b6ac54323dbc5ec7e01c416a1818408db859fb5cb07"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "e50cc769c6660755f6a628273f79e6b523f1c37b08762ca4919498558fc0035795d5eb5da8740dacd9386b9dc4c07e83eb4f5ac6511b5a9901a4bcebf1872502"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "32964ea4751ba7ad608674f4cdf242bd11b261c7b1d4be613b9e792de43c8109a243e474492c24c3aaff781a59351dfe0d190d59b22ce72e8b1da2b73b09ee04"
+      }
+    }
+  }
+}
+
+
+query_hash: "83948965cb26a06658ddb877a18d7d1b367017e1c63f3b71ece15642f28fb229"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_a@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_b@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896691792
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "ec8b7cfd8116cf41a6d961a76854bb2c7d50671848995332b58a422e951d0e7ac4cff1cfc6e0325c80f42c57d4c550d03c6333c81c91577e85edf09b6992170b"
+          }
+        }
+        height: 11
+        prev_block_hash: "b71a9d39e67b387ce498bad3532fa7488d25bff63da020a943539f37ecbb7f02"
+        created_time: 1637896692694
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "e79b546583c292ef2f568e89115b9b18d2882f9cbfd2d3750d407bf7bccdc12389d1b73cd0dd47743b4c91ba2372171915ae498c44e190472d05362a81bbd808"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "b149020c1c535f9006806cf2748e05e91266a8d2f06f1be0a4ad8297e5f62ca56a4c6862eed7a30b0030d82cee685dc900d2f24b574542d89b7ddab1e6bf200a"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "ba669e29c04409255e84eb667bb7c0d66f5613d12c6ce90ef75de9bb409e84d7d305690b34296d88b0b00e8595a3b45fc5a55b5aa2a0b2090bae5c36eceb2f0f"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "0893a91d431b7fc9712a278f5d757422ef2fd33935ed99d4814e8fa95935909c27ad09a7cc4ac8b73869275d445e2c629c2e9d2651d676323e66c69c7edaf30b"
+      }
+    }
+  }
+}
+
+
+query_hash: "a3f71bbf0fcefbbb153da84fa6c2a04a341d96c92e8692b18b8ed5f2221096b0"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                transfer_asset {
+                  src_account_id: "user_b@pytest"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  amount: "10"
+                }
+              }
+              creator_account_id: "user_b@pytest"
+              created_time: 1637896692770
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "f2f587bab4ada48e7747c7537cb4e1d2f6df1ddf6ea230d8028e8c53c4e86a0c"
+            signature: "1653ed99cfb6168b1cb4f70811322ca9fa63dbc96464b6160061fe96b37c85edf73cae269680888a70e2f102f8d6fb07b7dd553ed0d2e5a9dd7a88901afddd07"
+          }
+        }
+        height: 12
+        prev_block_hash: "5ba05a9e6caa3d83dd9d79a6bceca9a26f868ddfcaebe5453a172a393347d05b"
+        created_time: 1637896695751
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "8ca3fa570266605b135b8f0a88337b3ea35456918b7af6546253d6ef2ec2eae2a94377f9e4ad03e91817ff64625d7b88904a12017bc1f122eea050e461d9590b"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "407a7c66a4e3e70ec442415f799fdbce67cb64873f2ad5a6d23714569172da19a94368a3a170f08c4c7d6443573f3bdcfeb1aea386bfbfa850b44aefaee07c00"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "2d7d709e63c357d9675c618a0d9114b65d5121aca61c45c3d2f36c95f42c4594bbae5c333359a07dfc7a306996876e01b94a0b958c5271dbcda08039bf24db02"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "a76fe2d8d1ac89edeab7ab690473acc1e0c71b903d9e3a46e80d6e035bf70744b55ce46a9f8423d05ba3075e559a76e2290a05ee2fb4089a0c0dd407f59b230b"
+      }
+    }
+  }
+}
+
+
+query_hash: "140caac7897f4816888a227846b569460c80504c7c7114a77d9b67772a53da9b"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_a@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_b@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "90"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "110"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896698959
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "8ea6a1c0bb06fb0b9fc9e86e97d3b9ef6bbb753bd5eaa1cbee995dd7f2cd83b1d663f85cf0feaa6031151199b032d5734b7c46333007c13343d1bbc1b582b90e"
+          }
+        }
+        height: 13
+        prev_block_hash: "4ade18f380c3cfc0ae02e5bb36e96cc0278ff45dfc015e4db36a331d5baa54c0"
+        created_time: 1637896701802
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "0367d23df9dcf7e6cb7f9217f85ffdb2a7b70d6e31deddd4385fbb23a4b3332c02d3515d6b06710fb304dc394a4476a2aa8904767c2b08424405cc5d6832100a"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "2ef5a84171ef217d62c4ccc4ad30b6dfdea73949325abbd30898673ea2c47a8690012e9ebe9ac23c01882d1460216273012082fff1217fc72698e7367ed03704"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "ad15a3ae454da4320a1d718a0012291c1e49dd5de79f45689a057502bf354fe5071659893d5a8e03e650018a58ed4031f88a076219d3b8a1a092c24a71867905"
+      }
+    }
+  }
+}
+
+
+query_hash: "745b5bcddaf778eabcea09f1601fd81fd9286361b3c35d5e985f1ad6904083dc"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        height: 14
+        prev_block_hash: "fb647dbd6e54be0ed45e622be1463dd173312b9e1814cb10a6550eeddac79e4b"
+        created_time: 1637896704847
+        rejected_transactions_hashes: "2d13cf81ea853e663c2887d5bfdbcf2359a14bb4df8f13ddb9c56e57958d2f50"
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "4b8ee2c361dbcd95b26bbf0344eceb79a2a5225d67e1e87e8479c7564d378ddfe75c74cfba77599b972e74b6db9632ed8f472336c048cdf223bb40ee662f4f00"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "d3a5e4aef8c8a5047f9c429adc31feb04de031badbd47bdd8446e84b316050eaea8e555ffd1a8fcac155c9cc226e1823eef6aba139598a32a764b35452aba60f"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "c253b02f68cc3d62c870efdcb8bc660b28cbd84175cdd4ccd032d04f45a6c72e9fb4ad2f9630396c82e3e1e436a03db4ed8de273a952d614b8ee56e9fc3d1d08"
+      }
+    }
+  }
+}
+
+
+query_hash: "ca88f940a8ac228cd2a3a5d3a7224456767a8d7745b8adb8c269746515ffe1d6"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_a@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_b@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896707504
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "fa3be2a1913cee2d8fdffd4de726ccecc6d5d54960be7fea6bf4f3705e8b8a0689079ed95400a2466c9601561f6ffc80daba629cb669ac341f0da0e0c13e1601"
+          }
+        }
+        height: 15
+        prev_block_hash: "ba38f210f023955a1f89812605d66956974eb3ed9de238a4dd4ec8110a0b6f4d"
+        created_time: 1637896707889
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "c0ff289e10a8e20a9e76dfe157b432378758abf8aea8eb8f94a1abc388a1a2be97aa248f4db868da2d8c931c35582e43ad87a9ae13ccbc0220cac711a917990d"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "551ab1e2744ca14de750af842ecb83aaea65b606f1678b12a75b0ab985ce2d6bde0bac0d6bc097981fa1a848f71c6c163bdd976b48a5c66e994f01966e159804"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "c7b05a9512ffd638e787d4b5e9a424fb05217b9b1afec21701bfa91d35fa9cca4aad339d6fef05b5c27bbb0c6e661c9cffd65ebe263cd8a5fffed60cc551cd09"
+      }
+    }
+  }
+}
+
+
+query_hash: "4917945323516ac2127ccfc8d5ed03f3c2dda2c90c087440991ded74d566390e"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                transfer_asset {
+                  src_account_id: "user_a@pytest"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              creator_account_id: "user_a@pytest"
+              created_time: 1637896707960
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "67c11be2a9d089cfda569ab73e9345d2514270be01ee8372d0393396fb57cea2"
+            signature: "9a03deee820dd7c5616213dde99c62353d9d9b17b9aaea8a8c6b9d78b7e1390a00d20307e37f43359938a5f1232bd2a43b988462bf5a9c78eeb005816b9b9306"
+          }
+        }
+        height: 16
+        prev_block_hash: "67d067e9f477ed5a552f84f66cd598cd48f38ed123dfa3bc4eeb8139be25229f"
+        created_time: 1637896710941
+        rejected_transactions_hashes: "78353f4146b150b9f2cd7f34d74c7aa7ba335b9c80ed9f60e139c8b0d02ddfe2"
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "6b2b16e5f261e6fcfd9add8e9ee3c639a1b4a40b5c998b3a66ecb245e630f021667928fbab2928af6f4be06cb944f983aed0b04c004a999e7af8f5c22b2ebc0e"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "cf6f8cefa720a795b3280e57699a2ef2acbdf7281d4c5260250f9094ffc768cda26b2f45b847262d18300aae9f382e0e379fc3e3234eeeff9341287c7a90a604"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "98c2424bdfc36286a0f6c024fbd890f2bb573ff3c90d6ccfb6ba172076654cb67807b49eda730239c6dd520a84d1b12c924180b475773c774146458f01904207"
+      }
+    }
+  }
+}
+
+
+query_hash: "94d51dee77acd052d4e231e6d88b6800554833a9d6e576871d13d906db7ede7c"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_b@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "200"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896714104
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "f6c785a4aa7fc7e6cad8d03ebbd5fe3f92b283a648d292a2a7b59994a88bd97c14d4e7b2e40adcd5ce15f00d0e39e1fdb768be8034322b42b6eae7bfd261c403"
+          }
+        }
+        height: 17
+        prev_block_hash: "4f74f767b919d775939aa02e5f1d927605baeb301c2a9e44db0ff54521ac0656"
+        created_time: 1637896716993
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "834c6a32ed3a3279105da305b63b9ab12c80a2fc1ffb9e0794e07541b23fda33165a4a62b5163dc1838c2dff2858972731dcd9f7d32ce5f6b60195229bc89203"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "bd8224d900ea65a74c143d058878ec6b503827aa54dd05360f0b411b433b3711831a4051e2207d0a738d82049aa4a47df8a8c2db50501ff7c40efe4e07e82709"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "c667207d02582aa85411e75c137eb01a1c4b955dd4b4838597339fff4e89e5f13877f8e16888de033840f2b5d6d5eaf62fe76628c913f97fcfadcb3238833b09"
+      }
+    }
+  }
+}
+
+
+query_hash: "cf9aee1d86f8ee1976a2d4efd47435cd71bd70a6dab4284656d0c42152e9f13b"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        height: 18
+        prev_block_hash: "d5b43318e175d4442f94c1e23a8d3e6c1da6a9efc795ff664770114b5aebdc9a"
+        created_time: 1637896720044
+        rejected_transactions_hashes: "3bd386130d878312328c8987d06b1bfe3890b37c1a05162d9bdcf1800e50eeaf"
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "efe265e21a441aa2de89f688daa527392fced132a5903cfee6eedc239913742f1f7b4cc48230eb1fb7d4e6d69f5e311eb6e2d8933727311e654ca25a8088f30f"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "c2cdfac26f6be1414f9c4f06dcf76259279285800eb71bd3be82e8e2a90dd54bb15e358cd74485fc7ecb72a0bbb12b9d70b9e4becfcd115de77be76000ba9c00"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "4f856f2dbc146063e9ad621ba91c109c34c6e6d7bef86c7ff30f0ffe550f74e42eb40f5b0eae7cb9ef795da258d903a539800b9d50f25ffa338345b6b82e0c07"
+      }
+    }
+  }
+}
+
+
+query_hash: "2ea7aabf78f0c96f9d5b20b81dd0589858877af0aaeb761ccbcbeed7f9abb18d"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_a@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_b@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896722721
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "583b9574604f28cda653c9470260cc0265b35a5ab8e34a744a49cb2da89454293f4e891edc893b39e5b4e16533ec211448e3c1f6b9d7e58e146e71818793d00e"
+          }
+        }
+        height: 19
+        prev_block_hash: "0859c527de21339c7fb069fc92111e2c0d4345478fcc8c30d8625a5243890035"
+        created_time: 1637896723099
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "da768b759d12545559903936e6751796596402d5278bd3413fb955e4412569d6523a7b5b890df53719be246259c69ce06ddc29d497af8eb7f309291c0532ad02"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "eb284d2b7414570b28819d43c493d3a0a4df3860fca6bbb6ba403b971a2e801f64199e507d9b919f7db0b82da1282f95486966c9f4b3a64555e2edb38940d306"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "80f9d3b1592e8d2543c1d8ce6a8dbd82d6685782a5ddba64a03fcd7bfe7cb25946d5e99caa588f9ff5649f54652ba6cdb9932a4904f78f4045d1770225628b0a"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "9e1f159b9e714b0786600c6d241d6c93ef3fa3fa66b5f8369c0117476c88ff208e2dfc3651e01a548c32f1a45ed93f8c50badb1dcd513e4f17367311e3786e0d"
+      }
+    }
+  }
+}
+
+
+query_hash: "cb816d2e471cdfb67d6c0dbec511d5154c78d88a6d14922acf7c3be5ccfa9b35"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        height: 20
+        prev_block_hash: "b174f7ca0b8872f9d7b0bd954c6f6521d8f19a63b7bb455ac5e2f40d1b31bf0e"
+        created_time: 1637896726153
+        rejected_transactions_hashes: "9006c3c73426eb8b0ede0452d1bfc9ac1eca22f107224489a013606b430ff78d"
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "0a25b531cb0e18dafb548c5c4fe0266276c5efd945edf4237d23de7f6ebc7138e3ef82be10e1adca916e45d25f95a0071193773a8cff1b62685025a5e28e3705"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "04117cd6ec48d09b49eac255e1924b8192e2a359435095e5be30e64f0437cf27d8f6ba7678038b24482e9734b028ea59644a012935f5fe7a02e0d90673aa3807"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "dd470cfd8442358beb86e3451bd82a98b570261a6c0a80c20e2d24560da60a7959c66b9bdcad44e706f1949a13d5757dfde2d4840bbad36bf9c932c58d82c40b"
+      }
+    }
+  }
+}
+
+
+query_hash: "e10d853641c982a5818ecdb0110de66b299bd83aec55a9eacdfd5cb9c6abea75"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_a@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_b@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896729018
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "eb9900c195769adbc6cb96a56f8f98bb4bcb70af6bbc8aada7ace93a17559675b7f7e198b989ace37a49158815cfcb9bc65eee7aab9fafd543f372d99759ba06"
+          }
+        }
+        height: 21
+        prev_block_hash: "4f7d969fe9ba0d8c3034854bcdbee63e86518b8b490e1485df472c13e68b06c6"
+        created_time: 1637896729204
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "35012c5687ebe65cbb9899a25d739199ea8575d134743e1db5dd3fdc799df888710ddcee728313125040fda1c5c9bc0d50b3574fc132f0e855190d8a236b5a08"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "23b008a22adf1f3a881592e52b924b0ee167dcab0c2fa534a25df6320b7050df61af8405ec8c2fdc286e6027391cb7fe25d795467f0cbf74e39e534c5c01fe00"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "d9665037a4ec8792a695167d82ddcfaa34cc5d82f80c3e69ef21a386670420f68939103f2f51831945a134e3bdc04ff1fb76b9d8755eda251ab365867e241400"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "4850cc43571dca2b3dbc95f20fc5814ada6f415058d0b8638aec1410c54e801a19afa63c9d210990c1797283a093aad4b8f18cdad9a84731433ef850261e6a0d"
+      }
+    }
+  }
+}
+
+
+query_hash: "6ef35f61e43370f10769942a83e047bf0194c87cbf714ccaa94c7f833cfb0452"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        height: 22
+        prev_block_hash: "7b1dcf0ab5745eea563e0a6d98ce200fae3fa3ce65f31bdd737c796477583123"
+        created_time: 1637896732259
+        rejected_transactions_hashes: "f2cf19afcbf2c96326b2865b305223ec0ae7e630c6f10b6ac2c973f8c72419bf"
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "1919ff167308c3e2331be54ae5f0c75bd47562b8fdd698f4f101f922c27ad5e2cfdc6fcd92dc21b9588c583affb5b7fd6e23345c13cf661748dd259a09bd4d02"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "c0b707eb7ffc9d69c7aaaeb7f08eba09bfbe49b66c14d17e21996d51b924ed296f8600e72d8a579ba1e66b0da3707a349973bcc4eb6a78762b3929d586b2c00c"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "a30329a937505ee6c9d7c6684518da5abd5948527d1f73043afa71e78a2a411c48abdb08eb27133f11be3359a336813830bdd6f3a044fd5d6576d8e4dda1b305"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "7047122ac11c06e5b0edc7416c2f1ee537122ab998fb51fbc849f7e9f44e8e1deff82eb0f7d32dd02ed7816c72c6853974d8031a47b4eb121c4a79e653f73e0c"
+      }
+    }
+  }
+}
+
+
+query_hash: "b8f46789151587402327314d1afca9940186116550e7d0399679097873d59d23"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_a@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_b@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896734698
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "9dde873da8e19bbbaa2461216a1bf39396ca633d63f7c59738334905a1cc8275402a9b964f580291b8c0efba96428c38cee6f963e6cf6f3d1bfde71d6c01640c"
+          }
+        }
+        height: 23
+        prev_block_hash: "eaf3745210f2ef3c14530c06a9e0ca5ed7dea5b4bc82e3347b41b46622d2e6a6"
+        created_time: 1637896735310
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "284442a4b978e343b56e07b8f60e0ab86c361a71ac34d635031b89927629ac68139207f81a07c82998019d8c43988ce97ed75b4e7c7b89a226a7a56ba001b10c"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "0709b27453d8aaf6e42168b0a121dd5a53149891c7805406b25616a828519dbbaad6bf4b6ab120a2eaef93364430d41183b6b952e97a305d5ca90fd3536ddf02"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "6608d1c0e295ceb8059331e4f534227349a6dd23af4118923f4f64cd37e5c7476ab32d8f4d864f11a6d30566e381020405624a0226cccfec06270536de877306"
+      }
+    }
+  }
+}
+
+
+query_hash: "286d4db3ebc40927b8877246dd59cd568f97c1a8ddd13706cfcfe34239aac6e9"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  amount: "10"
+                }
+              }
+              creator_account_id: "user_c@pytest"
+              created_time: 1637896735380
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "6fa25d151156868a855541bd05d3b40a5661ed41f4acd48fd8ec0d6304d9edb6"
+            signature: "48462a48ad563968e17af753a7f4a832555861b169d3f119676eca1fecc443b1d829ee5d8f1df0f1e17af8006e4de6c6041a48d40e39cecb9c778d4717b4bb01"
+          }
+        }
+        height: 24
+        prev_block_hash: "5e6ece7c874362e682441e8232c57082d6f0548eb37fa5e842b4c4cff8c45f0d"
+        created_time: 1637896738358
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "8e09bcf0da1958de954e71aaabf78b06c289306a4671626831af4edc7a2355e81e7369a1e916a57c19d07b5cf76eaf76e8b481296872d9595dcdde142a9a3b0b"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "6c30c3a671f715befc347a5e50f43d8e6e04bb9db651fa3cada4d09b61352ed8ca9156d6e228f110c56beb002aeb50208be8ebab5e372c59569dd2a8ea89320a"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "2cfdc514a6a867dc186efb291196756756c03e67231c57c83c5a1add331382312f3666e809dfd430520f747cadbe3bc4f46632c5950f4788b1f3c3fc2e889e09"
+      }
+    }
+  }
+}
+
+
+query_hash: "0f6c75751420d6282cdc239cabbda27c28fad8749265f0f0076544ef5081a20d"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_a@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "110"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_b@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "90"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896741194
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "96e57c6c36293a4984c4d2f5f2d2005831815058bd7198a9527b1c799c41214b9e0ea9fc6793cf040699c20ec573e8040af14a7bdf13889fed11c5b4dbbbcc07"
+          }
+        }
+        height: 25
+        prev_block_hash: "fc5b14c9df10c533a31b6eb157f39faaff8bc7583ca0b36f4ca48b575877e224"
+        created_time: 1637896741407
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "38a760d94cba3d7b916e5aad2f39ae5c5fee620c86214ededdd3eb64748d1ff4cd8743ec93699df8094b3bd914d622c95ca620eebd9e0f7731a0b09e05040508"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "95fb9e5e57350eebcd22f9b4c58c189c31a2fda5e233885861e02a7805d254676d1e00e8dc1bc18b2320c1dcf8ef8f5f76f66b24e560101576fbcfad35c2880e"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "c55451d7dc470383002394d8ee485552678a4c9226421b263f29b97f1ea58f3fb2c5a5247ab65c632dfe76214d6d9cc742fb944c1a4ba4ae382eab75282e8705"
+      }
+    }
+  }
+}
+
+
+query_hash: "87f70a2e1f25b69b9b95a77f96b830f20f985a78b045bc1de4a42bb87eb732f8"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                transfer_asset {
+                  src_account_id: "user_a@pytest"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  amount: "10"
+                }
+              }
+              creator_account_id: "user_a@pytest"
+              created_time: 1637896741484
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "67c11be2a9d089cfda569ab73e9345d2514270be01ee8372d0393396fb57cea2"
+            signature: "b039fd19836f81a7759649aede17d7aac2ac63783b4a6a4fda2c7523a7a3d2f9c9d7c4430c2177aa63faf80f7d18a3436fd663ed5f6b9430be112385083a2208"
+          }
+        }
+        height: 26
+        prev_block_hash: "4d95e8aba1be9698483b3421c7dd531dd877fbc63db645f1e71bb47f94da84bd"
+        created_time: 1637896744461
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "4345f883466a124d672218a5182e9e87d2b3fd33ab19be9b2d61cc7415cc60556c36cac930c9fe183d885105d84547fc117e0c6f28a06770d99001561acbd309"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "4e2bfec380bf79ab8e1eb328de31b7921f8bac46114acda2f06fb872d4d96e9cf330a0bf52c1de36479635ac25a39fbec7a49096361d439f78d3fbaf0513d105"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "fcb875c8d16d6c60e176987cfc37252a62b1e5105733a89b3911da72c5f237252b3cbf93b8674388fe04fa1cb6006e23a9e7073c3ee8f4a8c40a4e63cb6e4e06"
+      }
+    }
+  }
+}
+
+
+query_hash: "9d5a5bbfd0385dbf421d24634c34705fb11b2544664823d35d88e48fd5934cab"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_a@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_a@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "90"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_b@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "100"
+                }
+              }
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user_c@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top up 100 coin"
+                  amount: "100"
+                }
+              }
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "admin@test"
+                  asset_id: "coin#pytest"
+                  description: "Transfer excess user balance back"
+                  amount: "110"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1637896746801
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "407e8b1071cf4b132fab8b6cf221990f0ec0f475ab5a91baa811ab60448e8c94cfa12867dd3d855eaa9fe6294e96d48865946e49dda30a01a07d2cc4f28b2101"
+          }
+        }
+        height: 27
+        prev_block_hash: "7ef0d700e860fc587c4f766fbdbd5c53dc6a840209d5eee3405cad29ab221854"
+        created_time: 1637896747509
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "42dcb1a5e03a36e1a8de8e9ddad89f6711e3fef60c80beba9dc0de2d900fd9e5d836dcceb614ab3ea4fe95b2282e5c91befde37b7bce51356a500bd9eadbe401"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "91d1021854ac2f54d3474585416d26c1fc1094c7517054759f07409b92ba6f6f506dce376f820462bbfbf64d87bc3644df31fd1ad850132fcbb83d119de4ac0c"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "854869362a528e7461e4dba97ce91e070e398a499a95e9541f6190c4250f2a22e2a6beea4f9ac43b487f58eb93f4b2281a1063b49bf95765ddedaac1d3d3a906"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "12bff449f1b36310eeb269984da2bf39dd81b78052526680a1772ad13d0b1ec47b909708b3a97a625fc7e2dfb4406f53ad48b0714300b0a849728c6b1b112b07"
+      }
+    }
+  }
+}
+
+
+query_hash: "97c948d3944bdab72c5e51e29cb580f86bd3674d5a5b559d4f09abc775e4949e"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                transfer_asset {
+                  src_account_id: "user_c@pytest"
+                  dest_account_id: "user_b@pytest"
+                  asset_id: "coin#pytest"
+                  amount: "10"
+                }
+              }
+              creator_account_id: "user_c@pytest"
+              created_time: 1637896747578
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "6fa25d151156868a855541bd05d3b40a5661ed41f4acd48fd8ec0d6304d9edb6"
+            signature: "6cdaf0f4469a8ba56cc95942f63f99ec615757ecd7b72763f235df36aded0e6e299beeb4367211d29d7f0d48d369b839ec1290c9e8ddbd4b856a0f513d918d0e"
+          }
+        }
+        height: 28
+        prev_block_hash: "08058a0868d245c0ca901551d0d3d93a81e7b7e21b3671bfcb8752141138011a"
+        created_time: 1637896750560
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "6ec7c26d8014ec590f6835b1ca9314fc37e03731bb0e1b7748a6f1323cc568276ffc750586310a0d3829bfc7e1235bdd890d41463a2abb381bbae0d7250f4f09"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "f03b6e22702ab58cd5f1f544ce60fa85ea73dc69bc355d922f26885d7a417fa59192026a88dad9b79bf0a9e46454bddd976a3d0f7fa69d3485b1cf0b8208aa0a"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "95d3ee992e962754f49f20077effa0e423b18a4981c4b7f182c6ccd4ca6508b7aa0864d701af3f3fea69599a9c73fe3d3ca0648eba0d5820fa7f564aa2481b02"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "cc0056e10ef5ffd7399febfee5557d889f3796518cdcb5595056511880667150e3c4d19a1523ef207c27b191051616714dea0f1584183fa7a50fc3fa064d350a"
+      }
+    }
+  }
+}
+
+

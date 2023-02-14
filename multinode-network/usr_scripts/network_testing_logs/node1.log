@@ -1,0 +1,673 @@
+query_hash: "49c037f98bf0e83583d085f7af76a8b54dbe4f34e5dc55c3533e2951385fdf4e"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_peer {
+                  peer {
+                    address: "172.29.101.121:10001"
+                    peer_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+                  }
+                }
+              }
+              commands {
+                add_peer {
+                  peer {
+                    address: "172.29.101.122:10002"
+                    peer_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+                  }
+                }
+              }
+              commands {
+                add_peer {
+                  peer {
+                    address: "172.29.101.123:10003"
+                    peer_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+                  }
+                }
+              }
+              commands {
+                add_peer {
+                  peer {
+                    address: "172.29.101.124:10004"
+                    peer_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+                  }
+                }
+              }
+              commands {
+                create_role {
+                  role_name: "admin"
+                  permissions: can_add_peer
+                  permissions: can_add_signatory
+                  permissions: can_create_account
+                  permissions: can_create_domain
+                  permissions: can_create_role
+                  permissions: can_get_all_acc_ast
+                  permissions: can_get_all_acc_ast_txs
+                  permissions: can_get_all_acc_detail
+                  permissions: can_get_all_acc_txs
+                  permissions: can_get_all_accounts
+                  permissions: can_get_all_signatories
+                  permissions: can_get_all_txs
+                  permissions: can_get_blocks
+                  permissions: can_get_roles
+                  permissions: can_read_assets
+                  permissions: can_remove_signatory
+                  permissions: can_set_quorum
+                }
+              }
+              commands {
+                create_role {
+                  role_name: "user"
+                  permissions: can_add_signatory
+                  permissions: can_get_my_acc_ast
+                  permissions: can_get_my_acc_ast_txs
+                  permissions: can_get_my_acc_detail
+                  permissions: can_get_my_acc_txs
+                  permissions: can_get_my_account
+                  permissions: can_get_my_signatories
+                  permissions: can_get_my_txs
+                  permissions: can_grant_can_add_my_signatory
+                  permissions: can_grant_can_remove_my_signatory
+                  permissions: can_grant_can_set_my_account_detail
+                  permissions: can_grant_can_set_my_quorum
+                  permissions: can_grant_can_transfer_my_assets
+                  permissions: can_receive
+                  permissions: can_remove_signatory
+                  permissions: can_set_quorum
+                  permissions: can_transfer
+                }
+              }
+              commands {
+                create_role {
+                  role_name: "money_creator"
+                  permissions: can_add_asset_qty
+                  permissions: can_create_asset
+                  permissions: can_receive
+                  permissions: can_transfer
+                }
+              }
+              commands {
+                create_domain {
+                  domain_id: "test"
+                  default_role: "user"
+                }
+              }
+              commands {
+                create_asset {
+                  asset_name: "coin"
+                  domain_id: "test"
+                  precision: 2
+                }
+              }
+              commands {
+                create_account {
+                  account_name: "admin"
+                  domain_id: "test"
+                  public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+                }
+              }
+              commands {
+                create_account {
+                  account_name: "test"
+                  domain_id: "test"
+                  public_key: "716fe505f69f18511a1b083915aa9ff73ef36e6688199f3959750db38b8f4bfc"
+                }
+              }
+              commands {
+                append_role {
+                  account_id: "admin@test"
+                  role_name: "admin"
+                }
+              }
+              commands {
+                append_role {
+                  account_id: "admin@test"
+                  role_name: "money_creator"
+                }
+              }
+              quorum: 1
+            }
+          }
+        }
+        tx_number: 1
+        height: 1
+        prev_block_hash: "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    }
+  }
+}
+
+
+query_hash: "a83e35d37343f69a552e59b3c1b6bc261ad08120eb7525a7a8faa92b8d31e8dc"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                create_domain {
+                  domain_id: "pytest"
+                  default_role: "user"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488663678
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "6b0b0d71b09ba7c01b7ff20ee0d6236d5dbdce526eb4aeb5d3543cda35cc44e6fe08e9aa547f6844026109cf6e05217876a86e8e81be106e9a0e45aeb7474101"
+          }
+        }
+        height: 2
+        prev_block_hash: "b88ff8f161317e294805c95e5bd5f2d06b975982c34e26aa4fd0caf32f6bc5c0"
+        created_time: 1638488665509
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "39b8ee0859ffcc344565bd35ca645a230b268cfd67a04acdf0302525ab5916dbf70ca398d60b6d12e8138581b00e91a2c3845faaf2260e87502101162c218301"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "dd6ad67e074d41974015efaeab3c12fdb7efee7b142ac8e955f66dd6977531731d190158b2631d57c329546fa9bf5eac2267b8c8ec386a65fe610f621b74f80a"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "8d2f72b1a50c2fa562f4466bdfe493af9fbe9d071778eeec0eca9125959fddd29cd659b0d8559241548e15631ace1d30734fb91a1c5defedd62a815240c1ef03"
+      }
+    }
+  }
+}
+
+
+query_hash: "fb83d4e798066d872cd0038e4f18cbd5b1b81100a052558411584da04c963698"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                create_asset {
+                  asset_name: "coin"
+                  domain_id: "pytest"
+                  precision: 2
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488668806
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "5e3192bb3830953068686a25dd719f4fa0eaa9081b1adce1c144e5e9145e4dfdb9e5e0b26c35406e7862b68b096b507d81f55461d1b0d48ee7d3da93bc1c480a"
+          }
+        }
+        height: 3
+        prev_block_hash: "1186d940e00c3755496518874a19387d628480b91c47c6c34f0efe2f2beaf2f7"
+        created_time: 1638488671560
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "4f61df181299f58b79dc0df90e22668c6ed264fefa9fbac9d78394900d3f69302e5f19ba6ded0eebc95cc9d52d75a943c675357f36a5fbe48c51ba2cce752502"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "bce42e5e7ad7d6fa01a0b75240025aafd1c0969c93c15ceac890a1ff380289bbb304f71fbbbb9acbc7e33d720013c0036f8df58629eeacb0801a403b5cfada09"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "232b0245b3fe742fc5e610db3161aedfdd1cca7de410f2bcb59d9610c481cabad37977f178c5b45345eec80e7d423b62f0c9fc37fecb6e50f0955d9d066d8b03"
+      }
+    }
+  }
+}
+
+
+query_hash: "4d58405dfda766875fcebfb716f0528fe38d5227c685db0a382cd9dbcf96c152"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                add_asset_quantity {
+                  asset_id: "coin#pytest"
+                  amount: "1000.00"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488672367
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "ff4c154a405f32bd5fa228bf011000a8d169ac5a4d84d979bbb3e3f3863da023dbc9f9bad1271c2bc2419ce1b8d93835e3701108171254487c15f0302c203307"
+          }
+        }
+        height: 4
+        prev_block_hash: "5ce67effc8a86f87bcc40b8353682544832cb71fd9209573c56ce76163702760"
+        created_time: 1638488674611
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "fd8e6b3a06bd6a9d89d376af9fe59b17614f622330a7a2334838734bc4fb67fc9c28147be78991ee8f6d2301d9856558506e518e4b4731c636ded98f0fbc640f"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "a281f12009b4c89ec709bee4357eb58be67efa3e823286337ce42c4d06e09fea3ea9c50c71bf98dc6e369c83a5a93f8d1b334cf6f28adc8aa67c4e57c0b6e30e"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "62a1088941b54a0ad6e94826bc03110db2e35a09f13cd5dcf1c001a2d7d4d098c0ceca8aa70792db6ece9268228bf0a8303ab15fe7440fc75505cd73a141be0d"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "b763be4e4d625c7b7625116ea7873241e5f6c324706ddf9328219c70ba5f1c90127066cd8cd7520ab190f39cff5c729ad0071fde3dd4bd50b553a288cc54a004"
+      }
+    }
+  }
+}
+
+
+query_hash: "da3d949a05cb8be9838fb382ac3f23e7c40c8057d65511fd97c274e75fdc07fc"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                create_account {
+                  account_name: "user1"
+                  domain_id: "pytest"
+                  public_key: "9a0d6b9d0942984a6d9b7bd46cd05e8612ddf9a8ff8c5eff3ac71578d8c54f45"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488675423
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "7eff315197c38617e3b5a1730fd1734d85ede25463773fde5061251723dc98f0dfd1dfedc560f47dcc99e708bf61e755bc6d1c0f3113e6dd4abadd8ae67da602"
+          }
+        }
+        height: 5
+        prev_block_hash: "382c8dc8965c8969cb6da88b9da59c866d980380680f3b4d5a9fc3986c9bc204"
+        created_time: 1638488677665
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "2217be7c74d097cf83437e588d2ad370553faa78018f0eafb310add380e1a8912f7c2b935bc38b1cbcadafad4f31be49487c16b0444743ced4a2ba0b8744290e"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "d6ef137996f784119153ed36b7dc9ce3842028f29066bbd7830174aa1fa3233eb69b34e7dd25c08adfe4a9500060c54a00cc170366ac0c04c9200547ec71b706"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "4927851a868af61323f9fdd6968a99ef60e55e9abb56523a674ca2998ebba6a2cc088c7f242202d50853d24877185f5840f13b0a66fe0f7d5c51eba159864402"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "e1e648935a050361e6439f89bf166d9078172a3d79255952400043ff497afd6b571f02f7fb516cee5cbc90d6ca306fc09915a7f0f819be7abf4f4ea6c1ade80d"
+      }
+    }
+  }
+}
+
+
+query_hash: "198c5630597f28b0baf9f148db9f4bbc6e2e752fc84d90c3616a2171a942e21c"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                create_account {
+                  account_name: "user2"
+                  domain_id: "pytest"
+                  public_key: "08802646ce6744cae9266da5806dfe2940f746aa5a2f3e117e1c4d463ae674e6"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488677723
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "c19f6f7d93db61c0d35391585f98c516152221881a1287d882f69e578f336db02196954b432ba6b33dcad5337edbf87dbc8d3a5c6bf20e6b6dcbfb435f60ad00"
+          }
+        }
+        height: 6
+        prev_block_hash: "69dd7ea4bb959e27ae407f7cae213686a674a08029ca47b2ecf442cd10e5fb5c"
+        created_time: 1638488680719
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "ac9a62f03fe0e0beb67da6da79f4351d7b3cb9d5e64e78d5221c8b866463230ed2b0e930d0ac2c2716cb3ef705403c926c428fcf6ab5c84702c306a50a8fad06"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "8ed18f68b2004be8344f4cb521c4d0ea9e2b9830c0e4b81966cb3420e3d35d4d33bb02be4c4062081830c966b8b57488be8fa9ff7b7be9b3483fa952bff03907"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "37ae6f43231eb4269aa9ea2150cbcaefce05008acc5f7afca28511cd951a1d0fcd34b460018f2e8d53608e9e357db5727bc054f99d6c156312915578a1786101"
+      }
+    }
+  }
+}
+
+
+query_hash: "b920252c4744867b0b0df3fa0f900a3601487a9adf0fdfb855caea8bad7d7a48"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                create_account {
+                  account_name: "user3"
+                  domain_id: "pytest"
+                  public_key: "c05b6b57c82196cfe0cd7c87c4ab99931289026b29ad29346874b1e53cf84821"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488680769
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "4e7cb4685ca9e4a672ffab75cd57ad65d2252783bb4b060fe0bd0752930dd9f6ba2f6e2b47ae0db803756f9fe6c0942dd0b6cb67fc828252ed40b9336d68e50a"
+          }
+        }
+        height: 7
+        prev_block_hash: "61624913f3039eda92a92f57bde88bcc5ee5e23695dd6892f0ff7a3a7cbcc2c3"
+        created_time: 1638488683768
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "f73dee131cc18f66cf7eee9b817a3663a093110a6fe7588c71bce1441915b2cf141333a5c166f91f629ea164cc582b81c7ba9ba39b775b5e13f55bf6195a8902"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "5df6165665444f1f577194615395d2ace1bf2aea2ba456bbf735d6d3cd9f8b15220f42b2bd5f476fd36e4abf71f5e9387da40296cb620142805809d937028004"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "a224f098d715224b02530e7eb91e39b26b5fb90b75369668abe94c00bc1b5d8aee218c7705c16cf46b6ab98e4850775380229cbbcb529123042eede7d7663b0b"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "ab67571485eb2e96af5cbf6151073d059bc23ea33cffc4c8fbb7bc0137ff05703eae0fa1452a99f2dfbe16924dad47793049628e44fe55665e901350e878e70c"
+      }
+    }
+  }
+}
+
+
+query_hash: "92845262b7ee620d0e8750582415c7c2ac6427f79be0d4a17e7f56e9218dfbd3"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                create_account {
+                  account_name: "user4"
+                  domain_id: "pytest"
+                  public_key: "5e54357be5f02de376081dcf15e207e18ee527516c4d45b25a6a673d04c765e7"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488683828
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "0932287cd61c3065f775e580fe237819156c7270c0733c6e1d3374842dd51a63baed6b0ec9854c7a22ec54ae5ea0892ac2fcbd35093de795f65ddf224c586301"
+          }
+        }
+        height: 8
+        prev_block_hash: "e2a8b41952af32a79e7f570b0f95726ec22a4d14daf8f2433b441293d5018324"
+        created_time: 1638488686820
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "171f50b1321d7f8ca9b863d27aa85e1b94572190992e3f275c3494a6a84cef5bbf746d4ca14cd31470b18b4f1f5ab8d17a8d39cef8a915f7641cebba785e480f"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "55314d12e5e375ffbfb66bb855bed75360c957e68141becb5c8a42fb555b4c6a1349b6056ffccb88a78b149d9058172261e867599de2c01ee9fb23d7e2d6e204"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "4e04f80d98a07b06c95fce9063eaedaabafcec2e297cc3a1e7cbb838f5e8011b55c04d8752bf45ddd3855c24b112bed2129441d7611ee0ddbeeaf43f064d480f"
+      }
+    }
+  }
+}
+
+
+query_hash: "e7fe6219ed0e265b7dc077b5ce9cbd4acc1f1fecc24f5ba5398db16b30f2ee16"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user1@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top Up"
+                  amount: "1.11"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488687615
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "7acbce91a55cdd200715d997a79eab41779b62c4571be4685a2f283bc13f19340698d8a074da1244fe6776e0d8de6d212cd0fa1e534bf8cc6a7733d47d0cd80f"
+          }
+        }
+        height: 9
+        prev_block_hash: "6534084302acd0cbb1e749427e3bf7cf0d9ca755fcce397782746d377529bac8"
+        created_time: 1638488689873
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "edffabfd2c00e9efdc51903c94465087cfc68fafa95f05fbdd6d7e9b367bff7552549151f8c214dc4e380c1b5632210dfc31fae4eedc7c2e09420435c06ea10a"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "fa98e41bbbdd63394a638c16bbf6e5a4c0708ca5f8b90f78057abf7f0a4709ddcc1db92bb818711bd640f37134a031a9cdead50713904bdce52fde25de0aac08"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "962afc2e7a92df0354a669128d1a78a9fa240f057f2002a50da7e37a4e7211b7221f8c0efb0a6924d68ecdbd5ff0116f107101e5e60c6d303800bb0493735c02"
+      }
+    }
+  }
+}
+
+
+query_hash: "7906946e9cc17fad8f0a26f8368c8bf80b51d15151463c138605c8e92d32a12b"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user2@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top Up"
+                  amount: "2.22"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488689928
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "dac38963cf109e29602d0adc48ae741632ee9f9baca2c79e4626aac6c57c9597a106aeefdd6614afda9e703b6b84fd4410dc94a0aba12466f9f78c0f7df8d109"
+          }
+        }
+        height: 10
+        prev_block_hash: "a7e1e6f440fee4bf845dc94c9369ad72076cb7fc91fd3522fae1bda3e4fa86fe"
+        created_time: 1638488692924
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "3b267669b220591a2f0a58cde8d625282955182fc5e984e4729260799961d33bad1e5cadff7f2956426c7aed9a73f774cc776602e9b61ca46d4840cabe3a6100"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "86a8f99add30ac5e2d8478d63a5b70ef985cdf18c2b9a27e95337a73b904651264bbe7f8e350e5028695c7731bcc14b57d4334ad1d8139c4ced80f3c981aa304"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "a6a06d032785e80958b7bfaf703aedfc82ef493531a785e4065eddbaac44c23e429bd77eb1cc4adbbdc0adb8fd531d03728141efa2fe7a32cb0ae36bfcaee10b"
+      }
+    }
+  }
+}
+
+
+query_hash: "695d568bf079d9f3cd7e63897a01033b253910a8e6a0378ea96520de04256a33"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user3@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top Up"
+                  amount: "3.33"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488692981
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "f2b828d5409a37ff35f244327212594236c4134d39473704d2b55b5f2e4c9a6ab415c2985303aafaab8774d500c0b6da7ae379694a672c24cfb1a6b36f649e09"
+          }
+        }
+        height: 11
+        prev_block_hash: "58cfda524d3a0d377278a1aa31eeb8b7d8a3586611be88912752f513ddfde118"
+        created_time: 1638488695975
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "8bde51707b9df08f6a3a26ec3f81dd502555e294c68cf084289eeda1899a5b74f2a887b33b2931ac7191a919ea36145c5bbbe1a60a3143b4c7a16025a7cff600"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "2ae01690a8bb7738cdf967bd616fc1e998fd7ea84f765afd7f06318bbfb0f0668b4d0134b1a2e788a2ea6b5f30d35a197faca6fce832300b49a646a80be1ae03"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "0830f5507f4867c27741163c77ec29a82ee6b5e68c2501668dc3498f0e0402cb388444c16f0636ae1bf413599e65376e33e0dd4d16e823d316b7e52c9c63800e"
+      }
+    }
+  }
+}
+
+
+query_hash: "e36b10a4fddc465eac9bb6d17a0856660d3e1b929b005bc5941979fe0408821e"
+block_response {
+  block {
+    block_v1 {
+      payload {
+        transactions {
+          payload {
+            reduced_payload {
+              commands {
+                transfer_asset {
+                  src_account_id: "admin@test"
+                  dest_account_id: "user4@pytest"
+                  asset_id: "coin#pytest"
+                  description: "Top Up"
+                  amount: "4.44"
+                }
+              }
+              creator_account_id: "admin@test"
+              created_time: 1638488696030
+              quorum: 1
+            }
+          }
+          signatures {
+            public_key: "313a07e6384776ed95447710d15e59148473ccfc052a681317a72a69f2a49910"
+            signature: "19c590dbae89881b80b4984da2f94d17ce86e4531c47e3e13cd52c4aa7d4435f806b2946d4eb02545cc71e32a5af5a27dcb414f439f33bb227fba2457c35fc05"
+          }
+        }
+        height: 12
+        prev_block_hash: "2ea7e47612db5222ce4f3cb36e4feaf7017fea13e2fd798a829c3e9cfd792805"
+        created_time: 1638488699024
+      }
+      signatures {
+        public_key: "bddd58404d1315e0eb27902c5d7c8eb0602c16238f005773df406bc191308929"
+        signature: "36207c37756ffad07815ff0c6ba1d17e157f5c4ee35958b1acfb6f403a42473c162417f6c11f9a03b2e62b84a88316e2c8a07cb288e9d9fa986948dfce2d9d0f"
+      }
+      signatures {
+        public_key: "55b77d9e7ecb1cad531555da10c28a475363cbdd0802b7951e85419014143ecc"
+        signature: "9a461d30903415c4a5622ee8ed644ff45f43e5b84f34eca67dce9a17a4a03aa36b932b62ab0c17b1f3ce84eeae3f4c5a64b3fa21e98cf0843a84fde68f0bfc0c"
+      }
+      signatures {
+        public_key: "3ad86d45d8b8e89298d49185b3418fc14a5b0ecbf3b26cb0a592c8ba6b8cae8e"
+        signature: "db9734aedb8f0bdd773909b3c0bb0468622a54b2d4118489eb1fcc3ab7c8f3930fe987f09dabbc9f79f483af3639202270e9de68c4dc22fc50138ea9b9c4f003"
+      }
+      signatures {
+        public_key: "6870dec85c32ba2d2c042c511b5a4ea4003823fd1ef819231becc7544331d5d3"
+        signature: "8dcba143dacc4ebf1ed1d257f56bac9c87eaef025114a5be20c821447ef4a69e23c7ccc8cdceb792450c69e13c5fe209b8d83a4d3c8614462071e397eb1bc905"
+      }
+    }
+  }
+}
+
+
